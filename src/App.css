@@ -1,0 +1,35 @@
+.main-login {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main-login img {
+  flex: 1;
+  object-fit: cover;
+}
+
+.LoginAdmin {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #15A466, #74328E);
+}
+
+@media screen and (max-width: 1200px) {
+  .main-login {
+    flex-direction: column;
+  }
+
+  .main-login img {
+    height: 50vh;
+    width: 100%;
+  }
+
+  .LoginAdmin {
+    height: 50vh;
+    padding: 20px;
+  }
+}

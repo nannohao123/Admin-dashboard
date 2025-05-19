@@ -1,0 +1,47 @@
+.user-dropdown{
+    width: 200px;
+    height: 43px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color:white;
+    border-radius: 20px;
+}
+
+.user-dropdown img{
+    height: 40px;
+    border-radius: 50px;
+    margin-left: 5px;
+}
+
+.users{
+    color: black;
+    margin-top: -48px;
+    margin-left: 60px;
+}
+
+.users p{
+    margin: 1px;
+    font-size: 14px;
+}
+
+.dropdown-menu{
+    margin-top: 20px;
+    padding: 12px;
+    background-color: white;
+    border-radius: 20px;
+    
+}
+
+.user-info p{
+    color: black;
+}
+
+.button-drop{
+    margin-bottom: 15px;
+}
+
+.dropdown-button{
+    margin-top: 15px;
+    width: 130px;
+    margin-left: 23px;
+}

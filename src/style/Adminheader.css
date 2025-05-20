@@ -29,7 +29,7 @@
     padding: 12px;
     background-color: white;
     border-radius: 20px;
-    
+    z-index: 9999;
 }
 
 .user-info p{
@@ -38,10 +38,12 @@
 
 .button-drop{
     margin-bottom: 15px;
+    z-index: 9999;
 }
 
 .dropdown-button{
     margin-top: 15px;
     width: 130px;
     margin-left: 23px;
+    z-index: 9999;
 }

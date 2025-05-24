@@ -21,16 +21,12 @@ function Dashboard() {
   ]
 
   return (
-    <div style={{ padding: '40px', display: 'flex' }}>
-      <div style={{ position:'fixed', marginTop:'-140px'}}>
-        <Sidebar />
-      </div>
-      <div className='main-content' style={{}}>
-        <div style={{ position:'fixed', marginLeft:'230px',marginTop:'-150px', backgroundColor:'#F2F2F2' }}>
-          <AdminHeader label='Dashboard' />
+    <div style={{ padding: '40px', display: 'flex', marginTop:'-100px', marginLeft:'-50px'}}>
+      <div className='main-content'>
+        <div style={{ }}>
+          <AdminHeader label='Dashboard'/>
         </div>
-        
-        <div className='contents' style={{ display: 'flex', marginLeft:'230px', marginTop:'-50px' }}>
+        <div className='contents' style={{ display: 'flex', marginTop:'50px' }}>
           <div className='info-left'>
             <div className='d-info' style={{ marginLeft: '15px', display: 'flex' }}>
               {contentItems.map((item, index) => (

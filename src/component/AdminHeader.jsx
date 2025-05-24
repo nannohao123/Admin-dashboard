@@ -17,7 +17,7 @@ function AdminHeader({ label }) {
     }
 
     return (
-        <div className="main-head" style={{ display: 'flex', width: '1595px', color: 'white' }}>
+        <div className="main-head">
             <h1 style={{ fontSize: '50px', marginTop: '10px', marginLeft: '40px', marginRight: '40px', color:'black' }}>{label}</h1>
             <input type="text"
                 style={{

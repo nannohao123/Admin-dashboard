@@ -9,6 +9,7 @@ import { Landmark } from 'lucide-react';
 import { GraduationCap } from 'lucide-react';
 import { SquareKanban } from 'lucide-react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 function Sidebar() {
@@ -16,21 +17,21 @@ function Sidebar() {
     const [openSubMenuIndex, setOpenSubMenuIndex] = useState(null); // submenu toggle
 
     const menuItems = [
-        { icon: <LayoutDashboard className='menu-icon' />, label: 'Dashboard' },
-        { 
+        { icon: <LayoutDashboard className='menu-icon' />, label: 'Dashboard', path: '/dashboard' },
+        {
             icon: <Book className='menu-icon' />,
             label: 'Modul utama',
-            subMenu:[
-                { label: 'Geolokasi' },
-                { label: 'Orang' },
-                { label: 'Kartu Keluarga' },
+            subMenu: [
+                { label: 'Geolokasi', path: '/geolokasi' },
+                { label: 'Orang', path: '/orang' },
+                { label: 'Kartu Keluarga', path: '/kartu-keluarga' },
             ]
         },
-        { icon: <Briefcase className='menu-icon' />, label: 'Kepegawaian' },
-        { icon: <Users className='menu-icon' />, label: 'Users' },
-        { icon: <Landmark className='menu-icon' />, label: 'Keuangan' },
-        { icon: <GraduationCap className='menu-icon' />, label: 'Akademik' },
-        { icon: <SquareKanban className='menu-icon' />, label: 'Utilitas' }
+        { icon: <Briefcase className='menu-icon' />, label: 'Kepegawaian', path: '/kepegawaian' },
+        { icon: <Users className='menu-icon' />, label: 'Users', path: '/users' },
+        { icon: <Landmark className='menu-icon' />, label: 'Keuangan', path: '/keuangan' },
+        { icon: <GraduationCap className='menu-icon' />, label: 'Akademik', path: '/akademik' },
+        { icon: <SquareKanban className='menu-icon' />, label: 'Utilitas', path: '/utilitas' }
     ];
 
     return (
@@ -50,22 +51,33 @@ function Sidebar() {
                                     if (item.subMenu) {
                                         setOpenSubMenuIndex(openSubMenuIndex === index ? null : index);
                                     } else {
-                                        setOpenSubMenuIndex(null); // tutup submenu lain
+                                        setOpenSubMenuIndex(null);
                                     }
                                 }}
                                 className={activeIndex === index ? 'active' : ''}
                                 style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', padding: '8px' }}
                             >
-                                {item.icon}
-                                <span style={{ marginLeft: '10px' }}>{item.label}</span>
+                                {item.path ? (
+                                    <Link to={item.path} style={{ display: 'flex', alignItems: 'center', color: 'inherit', textDecoration: 'none' }}>
+                                        {item.icon}
+                                        <span style={{ marginLeft: '10px' }}>{item.label}</span>
+                                    </Link>
+                                ) : (
+                                    <>
+                                        {item.icon}
+                                        <span style={{ marginLeft: '10px' }}>{item.label}</span>
+                                    </>
+                                )}
                             </div>
 
-                            {/*Render submenu jika ada dan aktif*/}
+                            {/* Submenu */}
                             {item.subMenu && openSubMenuIndex === index && (
                                 <ul className="submenu">
                                     {item.subMenu.map((subItem, subIndex) => (
                                         <li key={subIndex} className="submenu-item">
-                                            {subItem.label}
+                                            <Link to={subItem.path} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                                {subItem.label}
+                                            </Link>
                                         </li>
                                     ))}
                                 </ul>

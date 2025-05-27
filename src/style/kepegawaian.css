@@ -1,0 +1,90 @@
+.link-head{
+    background-color: #F2F2F2;
+    width: 100%;
+    position: fixed;
+}
+
+.untuk-pengaturan{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #333;
+    height: 200px;
+    border-radius: 20px;
+    margin-top: 50px;
+}
+
+.link-head button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(190, 190, 190);
+    border: none;
+}
+
+.link-head button:hover{
+    background-color: #4D9656;
+    transition: 0.5s;
+}
+
+.link-head button:focus{
+    background-color: #4D9656;
+    transition: 0.5s;
+    outline: none;
+}
+
+.tabel-kepegawaian-container {
+  padding: 20px;
+  background-color: white;
+  border-radius: 15px;
+  margin: 20px;
+  overflow-x: auto;
+  width: 1500px;
+}
+
+.tabel-kepegawaian-container h1{
+    color: black;
+    margin-top: 50px;
+    font-size: 40px;
+}
+
+.tabel-kepegawaian {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabel-kepegawaian th, .tabel-kepegawaian td {
+  text-align: center;
+  padding: 12px 15px;
+}
+
+.tabel-kepegawaian th {
+  color: rgb(214, 214, 214);
+}
+
+.tabel-kepegawaian td{
+    color: black;
+}
+
+.avatar-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.btn-ubah {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #333;
+}
+
+.btn-ubah:hover {
+  color: #007bff;
+}

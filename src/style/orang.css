@@ -1,0 +1,45 @@
+.tabel-orang-container {
+  padding: 20px;
+  background-color: white;
+  border-radius: 15px;
+  margin: 20px;
+  overflow-x: auto;
+  width: 1500px;
+}
+
+.tabel-orang {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabel-orang th, .tabel-orang td {
+  text-align: center;
+  padding: 12px 15px;
+}
+
+.tabel-orang th {
+  color: rgb(214, 214, 214);
+}
+
+.tabel-orang td{
+    color: black;
+}
+
+.avatar-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.btn-ubah {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #333;
+}
+
+.btn-ubah:hover {
+  color: #007bff;
+}

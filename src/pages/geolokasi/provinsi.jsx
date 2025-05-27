@@ -1,12 +1,12 @@
-import AdminHeader from "../component/AdminHeader";
-import Avatar from '../assets/Avatar.jpg';
-import '../style/geolokasi.css'
+import AdminHeader from '../../component/AdminHeader';
+import Avatar from '../../assets/Avatar.jpg'
+import '../../style/g-provinsi.css'
 import { Pencil } from 'lucide-react';
 import { NotepadText } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
-function geolokasi() {
-    const datageolokasi = Array.from({ length: 20 }).map((_, i) => ({
+function Provinsi() {
+    const dataProvinsi = Array.from({ length: 20 }).map((_, i) => ({
         avatar: Avatar,
         nik: '012345678910',
         nama: 'Ahmad Jibali',
@@ -18,7 +18,7 @@ function geolokasi() {
     const navigate = useNavigate();
 
     return (
-        <div className="Main-geolokasi" style={{ marginLeft:'280px', marginTop:'100px' }}>
+        <div className="Main-Provinsi" style={{ marginLeft:'280px', marginTop:'100px' }}>
             <AdminHeader label="Geolokasi" />
             <div className="link-head">
                 <button onClick={() => navigate('/geolokasi')}>Negara</button>
@@ -28,9 +28,9 @@ function geolokasi() {
                 <button onClick={() => navigate('/kelurahan')}>Kelurahan</button>
                 <button onClick={() => navigate('/alamat')}>Alamat</button>
             </div>
-            <div className="tabel-geolokasi-container">
-                <h1>Negara</h1>
-                <table className="tabel-geolokasi">
+            <div className="tabel-Provinsi-container">
+                <h1>Provinsi</h1>
+                <table className="tabel-Provinsi">
                     <thead>
                         <tr>
                             <th>Foto</th>
@@ -44,16 +44,16 @@ function geolokasi() {
                         </tr>
                     </thead>
                     <tbody>
-                        {datageolokasi.map((geolokasi, index) => (
+                        {dataProvinsi.map((Provinsi, index) => (
                             <tr key={index}>
                                 <td>
-                                    <img src={geolokasi.avatar} alt="avatar" className="avatar-img" />
+                                    <img src={Provinsi.avatar} alt="avatar" className="avatar-img" />
                                 </td>
-                                <td>{geolokasi.nik}</td>
-                                <td>{geolokasi.nama}</td>
-                                <td>{geolokasi.kota}</td>
-                                <td>{geolokasi.tanggalLahir}</td>
-                                <td>{geolokasi.alamat}</td>
+                                <td>{Provinsi.nik}</td>
+                                <td>{Provinsi.nama}</td>
+                                <td>{Provinsi.kota}</td>
+                                <td>{Provinsi.tanggalLahir}</td>
+                                <td>{Provinsi.alamat}</td>
                                 <td>
                                     <button className="btn-ubah">
                                         <NotepadText size={18} />
@@ -73,4 +73,4 @@ function geolokasi() {
     );
 }
 
-export default geolokasi;
+export default Provinsi;

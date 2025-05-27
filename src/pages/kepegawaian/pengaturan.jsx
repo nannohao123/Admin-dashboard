@@ -1,12 +1,12 @@
-import AdminHeader from "../component/AdminHeader";
-import Avatar from '../assets/Avatar.jpg';
-import '../style/geolokasi.css'
+import AdminHeader from "../../component/AdminHeader";
+import Avatar from '../../assets/Avatar.jpg'
+import '../../style/kepegawaian.css';
 import { Pencil } from 'lucide-react';
 import { NotepadText } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
-function geolokasi() {
-    const datageolokasi = Array.from({ length: 20 }).map((_, i) => ({
+function Kepegawaian() {
+    const datakepegawaian = Array.from({ length: 10 }).map((_, i) => ({
         avatar: Avatar,
         nik: '012345678910',
         nama: 'Ahmad Jibali',
@@ -18,19 +18,20 @@ function geolokasi() {
     const navigate = useNavigate();
 
     return (
-        <div className="Main-geolokasi" style={{ marginLeft:'280px', marginTop:'100px' }}>
-            <AdminHeader label="Geolokasi" />
+        <div className="Main-kepegawaian" style={{ marginLeft:'280px', marginTop:'100px' }}>
+            <AdminHeader label="Kepegawaian" />
             <div className="link-head">
-                <button onClick={() => navigate('/geolokasi')}>Negara</button>
-                <button onClick={() => navigate('/provinsi')}>Provinsi</button>
-                <button onClick={() => navigate('/kota')}>Kota</button>
-                <button onClick={() => navigate('/kecamatan')}>Kecamatan</button>
-                <button onClick={() => navigate('/kelurahan')}>Kelurahan</button>
-                <button onClick={() => navigate('/alamat')}>Alamat</button>
+                <button onClick={() => navigate('/kepegawaian')}>Daftar Pegawai</button>
+                <button onClick={() => navigate('/entri')}>Entri</button>
+                <button onClick={() => navigate('/laporan')}>Laporan</button>
+                <button onClick={() => navigate('/pengaturan')}>Pengaturan</button>
             </div>
-            <div className="tabel-geolokasi-container">
-                <h1>Negara</h1>
-                <table className="tabel-geolokasi">
+            <div className="tabel-kepegawaian-container">
+                <div className="untuk-pengaturan">
+                    <h1 style={{ color:'white' }}>Nama kegiatan</h1>
+                </div>
+                <h1>Orang</h1>
+                <table className="tabel-kepegawaian">
                     <thead>
                         <tr>
                             <th>Foto</th>
@@ -44,16 +45,16 @@ function geolokasi() {
                         </tr>
                     </thead>
                     <tbody>
-                        {datageolokasi.map((geolokasi, index) => (
+                        {datakepegawaian.map((kepegawaian, index) => (
                             <tr key={index}>
                                 <td>
-                                    <img src={geolokasi.avatar} alt="avatar" className="avatar-img" />
+                                    <img src={kepegawaian.avatar} alt="avatar" className="avatar-img" />
                                 </td>
-                                <td>{geolokasi.nik}</td>
-                                <td>{geolokasi.nama}</td>
-                                <td>{geolokasi.kota}</td>
-                                <td>{geolokasi.tanggalLahir}</td>
-                                <td>{geolokasi.alamat}</td>
+                                <td>{kepegawaian.nik}</td>
+                                <td>{kepegawaian.nama}</td>
+                                <td>{kepegawaian.kota}</td>
+                                <td>{kepegawaian.tanggalLahir}</td>
+                                <td>{kepegawaian.alamat}</td>
                                 <td>
                                     <button className="btn-ubah">
                                         <NotepadText size={18} />
@@ -73,4 +74,4 @@ function geolokasi() {
     );
 }
 
-export default geolokasi;
+export default Kepegawaian;

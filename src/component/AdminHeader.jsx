@@ -17,8 +17,8 @@ function AdminHeader({ label }) {
     }
 
     return (
-        <div className="main-head">
-            <h1 style={{ fontSize: '50px', marginTop: '10px', marginLeft: '40px', marginRight: '40px', color:'black' }}>{label}</h1>
+        <div className="main-head" style={{ marginTop:'0px', padding:'10px' }}>
+            <h1 style={{ fontSize: '50px', marginTop: '35px', marginLeft: '40px', marginRight: '40px', color:'black' }}>{label}</h1>
             <input type="text"
                 style={{
                     height: '60px',
@@ -30,7 +30,8 @@ function AdminHeader({ label }) {
                     color: 'black',
                     paddingLeft: '20px',
                     fontSize: '18px',
-                    marginRight: '40px'
+                    marginRight: '40px',
+                    
                 }}
                 placeholder="Cari data disini"
             />
@@ -56,7 +57,7 @@ function AdminHeader({ label }) {
                         </div>
                         <hr />
                         <div className='button-drop'>
-                            <button className="dropdown-button">Setting</button>
+                            <button className="dropdown-button" onClick={() => navigate('/setting')}>Setting</button>
                             <button className="dropdown-button" onClick={handleLogout}>Logout</button>
                         </div>
                     </div>

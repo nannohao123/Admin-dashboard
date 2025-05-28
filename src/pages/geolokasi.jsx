@@ -1,5 +1,5 @@
 import AdminHeader from "../component/AdminHeader";
-import Avatar from '../assets/Avatar.jpg';
+import Avatar from '../assets/indonesia-flag.png';
 import '../style/geolokasi.css'
 import { Pencil } from 'lucide-react';
 import { NotepadText } from 'lucide-react';

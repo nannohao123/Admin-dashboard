@@ -1,0 +1,62 @@
+.tabel-keuangan-container {
+  padding: 20px;
+  background-color: white;
+  border-radius: 15px;
+  margin: 20px;
+  overflow-x: auto;
+  width: 1500px;
+}
+
+.header-keuangan{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-keuangan h1{
+    color: black;
+    font-size: 40px;
+}
+
+.btn-kategori{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.tabel-keuangan {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabel-keuangan th, .tabel-keuangan td {
+  text-align: center;
+  padding: 12px 15px;
+}
+
+.tabel-keuangan th {
+  color: rgb(214, 214, 214);
+}
+
+.tabel-keuangan td{
+    color: black;
+}
+
+.avatar-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.btn-ubah {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #333;
+}
+
+.btn-ubah:hover {
+  color: #007bff;
+}
